@@ -3,7 +3,7 @@
 :root {
   --primary-color: #a855f7;
   --primary-color-dark: #9333ea;
-  --secondary-color: #ca8a04;
+  --secondary-color: #a855f7;
   --text-dark: #ffffff; /* changed for contrast */
   --text-light: #d1d5db; /* lighter shade for better readability */
   --extra-light: #000000; /* background updated to black */
@@ -220,4 +220,129 @@ ul li a:hover {
   .action__btns {
     margin: auto;
   }
+}
+/** 
+* resume
+*/
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  padding-top: 60px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  background-color: rgba(0, 0, 0, 0.85); /* Slightly darker overlay */
+}
+
+.modal-content {
+  background-color: var(--jet, #121212); /* Dark background matching your theme */
+  margin: auto;
+  padding: 2rem;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 900px;
+  color: white; /* consistent with resume text */
+  box-shadow: 0 0 20px var(--text-gradient-purple, #a855f7);
+}
+
+.close {
+  color: var(--light-gray, #aaa);
+  float: right;
+  font-size: 30px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.close:hover {
+  color: var(--text-gradient-purple, #a855f7);
+}
+
+/* Container for timeline list */
+.timeline-list {
+  position: relative;
+  list-style: none;
+  padding-left: 40px; /* space for vertical line */
+  margin: 0;
+}
+
+/* Vertical line */
+.timeline-list::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 15px;          /* position of the vertical line */
+  width: 2px;
+  height: 100%;
+  background: var(--jet, #ffffff);
+}
+
+/* Each timeline item */
+.timeline-item {
+  position: relative;
+  margin-bottom: 30px;
+  padding-left: 20px;
+}
+
+/* Timeline dot marker */
+.timeline-item:not(:last-child)::before {
+  content: "";
+  position: absolute;
+  top: -25px;
+  left: -30px;
+  width: 1px;
+  height: calc(100% + 50px);
+  background: var(--jet);
+}
+
+.timeline-item::after {
+  content: "";
+  position: absolute;
+  left: -29px;         /* place dot on the vertical line */
+  top: 5px;
+  width: 10px;
+  height: 10px;
+  background: var(--text-gradient-purple, #a855f7);
+  border-radius: 50%;
+  box-shadow: 0 0 0 3px var(--jet, #b1adad);
+}
+
+.skills-title {
+  margin-bottom: 20px;
+  color: white;
+}
+
+.skills-list {
+  background-color: #121212; /* White background */
+  color: rgb(255, 255, 255);             /* Black text */
+  display: flex;
+  flex-wrap: wrap;
+  list-style: disc;
+  padding: 20px;
+  border-radius: 10px;      
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional: subtle shadow */
+}
+
+.skills-item {
+  flex: 1 1 calc(50% - 10px); /* 2 per row */
+  /* box-sizing: border-box; */
+  padding: 10px;
+  /* background: #a77ae6; */
+  box-shadow: 0 0 10px var(--text-gradient-purple, #a855f7);
+  border-radius: 5px;
+  color: #ffffff;
+}
+
+/* Optional: single column on small screens */
+@media (max-width: 500px) {
+  .skills-item {
+    flex: 1 1 100%;
+  }
+}
+
+.skills-item:not(:last-child) {
+  margin-bottom: 10px;
 }

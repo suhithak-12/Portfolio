@@ -20,9 +20,8 @@
         </label>
         <input type="checkbox" name="check" id="check" />
         <ul>
-          <li><a href="#">Home</a></li>
           <li><a href="#">About</a></li>
-          <li><a href="#">Resume</a></li>
+          <li><a href="#" id="openResume">Resume</a></li>
           <li><a href="#">Portfolio</a></li>
           <li><a href="#">Contact</a></li>
         </ul>
@@ -36,7 +35,7 @@
             I'm <span>Suhitha<br /></span> 
           </h1>
           <p class="description">
-            Welcome to my web developer portfolio! I'm Mitchell, a skilled and
+            Welcome to my web developer portfolio! I'm suhitha, a skilled and
             creative web developer with a passion for creating beautiful,
             responsive, and user-friendly websites. I've worked on a variety of
             web projects, ranging from personal blogs to e-commerce platforms.
@@ -51,5 +50,80 @@
         </div>
       </div>
     </section>
+    <div id="resumeModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    
+    <!-- === RESUME === -->
+    <header>
+      <h2 class="h2 article-title">Resume</h2>
+    </header>
+
+    <section class="timeline">
+      <div class="title-wrapper">
+        <div class="icon-box">
+          <ion-icon name="book-outline"></ion-icon>
+        </div>
+        <h3 class="h3">Education</h3>
+      </div>
+
+      <ol class="timeline-list">
+        <li class="timeline-item">
+          <h4 class="h4 timeline-item-title">New Mexico Institute of Mining and Technology</h4>
+          <span>2022 — Present</span>
+          <p class="timeline-text">
+            Studied C/C++, Java, Assembly, R, LaTeX, Typescript.<br> Interests: Web Development, WSN's and Theory.
+          </p>
+        </li>
+        <li class="timeline-item">
+          <h4 class="h4 timeline-item-title">Socorro High School</h4>
+          <span>2019 — 2022</span>
+          <p class="timeline-text">
+            Took classes in Computer Science, Participated in Science Olympiad and many more clubs.
+          </p>
+        </li>
+      </ol>
+    </section>
+
+    <section class="timeline">
+      <div class="title-wrapper">
+        <div class="icon-box">
+          <ion-icon name="book-outline"></ion-icon>
+        </div>
+        <h3 class="h3">Experience</h3>
+      </div>
+      <ol class="timeline-list">
+        <li class="timeline-item">
+          <h4 class="h4 timeline-item-title">Social Media Ambassador</h4>
+          <span>2025 — Present</span>
+          <p class="timeline-text">Working with the universities admissions office to provide a creative aspect.</p>
+        </li>
+        <li class="timeline-item">
+          <h4 class="h4 timeline-item-title">Student Engagement and Career Assistant</h4>
+          <span>2025 - present</span>
+          <p class="timeline-text">Assisting students in their engagement within the campus and guiding them through their career.</p>
+        </li>
+      </ol>
+    </section>
+
+    <section class="skill">
+      <h3 class="h3 skills-title">My Skills</h3>
+      <ul class="skills-list content-card">
+        <li class="skills-item">Python Programming</li>
+        <li class="skills-item">C (C, C#, C++) Programming</li>
+        <li class="skills-item">HTML, CSS, Java</li>
+        <li class="skills-item">Data Science</li>
+        <li class="skills-item">Prompt Engineering</li>
+        <li class="skills-item">Software Development</li>
+        <li class="skills-item">Research-Oriented Programming</li>
+        <li class="skills-item">Team management and leadership</li>
+        <li class="skills-item">Web Development</li>
+        <li class="skills-item">Data Structures and Algorithms</li>
+      </ul>
+    </section>
+    <!-- === RESUME CONTENT ENDS HERE === -->
+  </div>
+</div>
+<script src="script.js"></script>
   </body>
 </html>
