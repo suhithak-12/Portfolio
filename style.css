@@ -308,41 +308,36 @@ ul li a:hover {
   background: var(--text-gradient-purple, #a855f7);
   border-radius: 50%;
   box-shadow: 0 0 0 3px var(--jet, #b1adad);
-}
-
+}/* SKILLS */
 .skills-title {
   margin-bottom: 20px;
   color: white;
 }
 
 .skills-list {
-  background-color: #121212; /* White background */
-  color: rgb(255, 255, 255);             /* Black text */
+  background-color: #121212;
+  color: #ffffff;
   display: flex;
   flex-wrap: wrap;
-  list-style: disc;
+  gap: 15px;
   padding: 20px;
-  border-radius: 10px;      
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional: subtle shadow */
+  border-radius: 10px;
+  box-shadow: 0 0 10px var(--text-gradient-purple, #a855f7);
+  list-style: none;
 }
 
 .skills-item {
-  flex: 1 1 calc(50% - 10px); /* 2 per row */
-  /* box-sizing: border-box; */
+  flex: 1 1 calc(50% - 15px); /* Always 2 per row */
+  box-sizing: border-box;
+  min-width: 200px;
   padding: 10px;
-  /* background: #a77ae6; */
-  box-shadow: 0 0 10px var(--text-gradient-purple, #a855f7);
   border-radius: 5px;
   color: #ffffff;
 }
 
-/* Optional: single column on small screens */
+/* 1 per row on small devices */
 @media (max-width: 500px) {
   .skills-item {
     flex: 1 1 100%;
   }
-}
-
-.skills-item:not(:last-child) {
-  margin-bottom: 10px;
 }
